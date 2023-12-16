@@ -2,6 +2,15 @@
 
 Middle Stage Food PK exploring Salesforce GraphQL endpoint
 
+## Deployment
+- Authenticate into your target org
+- Run deploy source to org command
+- Create your integration user
+- Create the connected app
+  - enable oauth setting
+  - enable client credential flow
+  - set run as the integration user
+
 ## sfdx readmes
 
 ### Salesforce DX Project: Next Steps
