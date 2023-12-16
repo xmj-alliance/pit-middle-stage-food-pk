@@ -1,0 +1,5 @@
+# Salesforce cache for forcefully running sfdx plugin
+.sf/
+.sfdx/
+.localdevserver/
+deploy-options.json
