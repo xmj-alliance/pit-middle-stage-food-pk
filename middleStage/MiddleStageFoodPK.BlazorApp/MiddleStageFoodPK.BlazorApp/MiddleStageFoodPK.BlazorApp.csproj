@@ -4,10 +4,12 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>bc1a2d1d-c633-448a-8e49-6bc6b2751af4</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\MiddleStageFoodPK.BlazorApp.Client\MiddleStageFoodPK.BlazorApp.Client.csproj" />
+    <PackageReference Include="Duende.AccessTokenManagement" Version="2.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.0" />
   </ItemGroup>
 

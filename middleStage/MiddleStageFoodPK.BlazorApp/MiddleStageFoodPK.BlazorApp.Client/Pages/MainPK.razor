@@ -1,0 +1,29 @@
+﻿@page "/pks/main"
+@rendermode InteractiveAuto
+
+<PageTitle>MainPK</PageTitle>
+
+<h1 @onclick="Hello">This is the name of that PK</h1>
+
+This is the content of that PK
+
+<div>
+    <button class="btn btn-primary" @onclick="OnGetListViewButtonClick">GetListViewTest</button>
+</div>
+
+
+@code {
+    private async Task Hello()
+    {
+        Class1 c = new();
+        var r = await c.Happy();
+        Console.WriteLine(r);
+    }
+
+    private async Task OnGetListViewButtonClick()
+    {
+        //var result = await testyIntegration.GetListViewTest();
+        //Console.WriteLine(result);
+        Console.WriteLine("OnGetListViewButtonClick()");
+    }
+}
