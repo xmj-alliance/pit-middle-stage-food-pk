@@ -1,6 +1,6 @@
 ﻿using GraphQL.Client.Http;
 
-namespace MiddleStageFoodPK.Relay;
+namespace MiddleStageFoodPK.Relay.Context;
 
 public interface IGraphQLClientContext
 {

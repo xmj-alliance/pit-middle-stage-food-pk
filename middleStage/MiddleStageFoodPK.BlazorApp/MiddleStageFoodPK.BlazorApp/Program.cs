@@ -1,5 +1,7 @@
 using MiddleStageFoodPK.BlazorApp.Client.Pages;
 using MiddleStageFoodPK.BlazorApp.Components;
+using MiddleStageFoodPK.Relay.Context;
+using MiddleStageFoodPK.Relay.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -35,6 +37,10 @@ builder.Services.AddRazorComponents()
     .AddInteractiveWebAssemblyComponents();
 
 builder.Services.AddDistributedMemoryCache();
+
+// Configuring services
+builder.Services.AddSingleton<IDataAccessService, DataAccessService>();
+builder.Services.AddSingleton<IGraphQLClientContext, GraphQLClientContext>();
 
 var app = builder.Build();
 

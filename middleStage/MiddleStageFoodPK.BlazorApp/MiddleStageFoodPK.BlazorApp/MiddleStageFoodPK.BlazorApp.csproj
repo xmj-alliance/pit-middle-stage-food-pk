@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\MiddleStageFoodPK.Relay\MiddleStageFoodPK.Relay.csproj" />
     <ProjectReference Include="..\MiddleStageFoodPK.BlazorApp.Client\MiddleStageFoodPK.BlazorApp.Client.csproj" />
     <PackageReference Include="Duende.AccessTokenManagement" Version="2.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.0" />

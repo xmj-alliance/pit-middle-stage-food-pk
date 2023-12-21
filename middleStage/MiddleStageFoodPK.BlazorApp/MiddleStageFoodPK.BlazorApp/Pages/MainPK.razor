@@ -1,5 +1,6 @@
 ﻿@page "/pks/main"
-@rendermode InteractiveAuto
+@rendermode InteractiveServer
+@inject IDataAccessService dataAccessService
 
 <PageTitle>MainPK</PageTitle>
 
@@ -13,17 +14,13 @@ This is the content of that PK
 
 
 @code {
-    private async Task Hello()
+    private void Hello()
     {
-        Class1 c = new();
-        var r = await c.Happy();
-        Console.WriteLine(r);
+        Console.WriteLine("hello");
     }
 
     private async Task OnGetListViewButtonClick()
     {
-        //var result = await testyIntegration.GetListViewTest();
-        //Console.WriteLine(result);
-        Console.WriteLine("OnGetListViewButtonClick()");
+        await dataAccessService.TestGetAccounts();
     }
 }

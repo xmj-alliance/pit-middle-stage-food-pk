@@ -22,8 +22,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\MiddleStageFoodPK.Service\MiddleStageFoodPK.Service.csproj" />
-  </ItemGroup>
-
 </Project>

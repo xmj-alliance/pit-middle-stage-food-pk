@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiddleStageFoodPK.BlazorApp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiddleStageFoodPK.BlazorApp.Client", "MiddleStageFoodPK.BlazorApp\MiddleStageFoodPK.BlazorApp.Client\MiddleStageFoodPK.BlazorApp.Client.csproj", "{BAFFD81D-D6B6-4481-87FC-5A8FC120A429}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiddleStageFoodPK.Service", "MiddleStageFoodPK.Service\MiddleStageFoodPK.Service.csproj", "{D115665B-CA3A-48B0-9839-82FF9FCB3CE9}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiddleStageFoodPK.Test", "MiddleStageFoodPK.Test\MiddleStageFoodPK.Test.csproj", "{4835E11C-CFDE-4986-9165-190E1504448B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiddleStageFoodPK.Relay", "MiddleStageFoodPK.Relay\MiddleStageFoodPK.Relay.csproj", "{70F821CC-37FD-4CBC-BAB6-F68220A4C302}"
@@ -27,10 +25,6 @@ Global
 		{BAFFD81D-D6B6-4481-87FC-5A8FC120A429}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAFFD81D-D6B6-4481-87FC-5A8FC120A429}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAFFD81D-D6B6-4481-87FC-5A8FC120A429}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D115665B-CA3A-48B0-9839-82FF9FCB3CE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D115665B-CA3A-48B0-9839-82FF9FCB3CE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D115665B-CA3A-48B0-9839-82FF9FCB3CE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D115665B-CA3A-48B0-9839-82FF9FCB3CE9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4835E11C-CFDE-4986-9165-190E1504448B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4835E11C-CFDE-4986-9165-190E1504448B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4835E11C-CFDE-4986-9165-190E1504448B}.Release|Any CPU.ActiveCfg = Release|Any CPU

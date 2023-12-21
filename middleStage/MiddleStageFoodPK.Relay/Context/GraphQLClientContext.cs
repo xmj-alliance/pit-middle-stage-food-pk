@@ -3,7 +3,7 @@ using GraphQL.Client.Serializer.SystemTextJson;
 using System.Text.Json.Serialization;
 using System.Text.Json;
 
-namespace MiddleStageFoodPK.Relay;
+namespace MiddleStageFoodPK.Relay.Context;
 
 public class GraphQLClientContext : IGraphQLClientContext
 {
@@ -16,8 +16,8 @@ public class GraphQLClientContext : IGraphQLClientContext
         IHttpClientFactory factory
     )
     {
-        httpClient = factory.CreateClient("client");
-        endPoint = new Uri($"{httpClient.BaseAddress}/graphql");
+        httpClient = factory.CreateClient("salesforce");
+        endPoint = new Uri($"{httpClient.BaseAddress}/services/data/v59.0/graphql");
 
         Client = new GraphQLHttpClient(
             new GraphQLHttpClientOptions
