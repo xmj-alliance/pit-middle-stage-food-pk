@@ -24,7 +24,7 @@ public record SalesforceGQLRecordQuery(
 public record SalesforceGQLAccount(
     string Id,
     SalesforceGQLValue<string> Name,
-    SalesforceGQLValue<double> Average_Stars__c,
+    SalesforceGQLValue<double?> Average_Stars__c,
     SalesforceGQLConnection<SalesforceGQLContact> Contacts
 );
 
@@ -53,7 +53,7 @@ public record SalesforceGQLEdge<T>(
 public record SalesforceGQLValue<T>(
     string displayValue,
     string label,
-    T value
+    T? value
 );
 
 #endregion abstractions

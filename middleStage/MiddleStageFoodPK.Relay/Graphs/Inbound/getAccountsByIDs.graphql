@@ -1,0 +1,37 @@
+query getAccountsByIDs($ids: [ID]!)
+{
+  uiapi {
+    query {
+      Account(
+        where: {
+          Id: {
+            in: $ids
+          }
+        }
+      ) {
+        edges {
+          node {
+            Id
+            Name {
+              value
+            }
+            Contacts {
+              edges {
+                node {
+                  Id
+                  Name {
+                    value
+                  }
+                }
+              }
+            }
+            Average_Stars__c {
+                value
+                displayValue
+            }
+          }
+        }
+      }
+    }
+  }
+}

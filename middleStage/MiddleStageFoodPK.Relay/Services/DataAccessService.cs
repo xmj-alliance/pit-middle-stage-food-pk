@@ -1,19 +1,8 @@
 ﻿using GraphQL;
 using GraphQL.Client.Http;
-using GraphQL.Types.Relay.DataObjects;
 using Microsoft.Extensions.Logging;
 using MiddleStageFoodPK.Model.Upstream;
 using MiddleStageFoodPK.Relay.Context;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata;
-using System.Security.Principal;
-using System.Text;
-using System.Text.Json;
-using System.Text.Json.Nodes;
-using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace MiddleStageFoodPK.Relay.Services;
 
@@ -22,6 +11,9 @@ public class DataAccessService : IDataAccessService
     private readonly GraphQLHttpClient client;
     private readonly ILogger<DataAccessService> logger;
 
+    public string GraphBasePath { get; init; } =
+      Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "Graphs", "Inbound"));
+
     public DataAccessService(
         ILogger<DataAccessService> logger,
         IGraphQLClientContext clientContext
@@ -29,43 +21,25 @@ public class DataAccessService : IDataAccessService
     {
         this.logger = logger;
         client = clientContext.Client;
+
     }
 
     public async Task TestGetAccounts()
     {
-        string query = """
-        {
-          uiapi {
-            query {
-              Account {
-                edges {
-                  node {
-                    Id
-                    Name {
-                      value
-                    }
-                    Contacts {
-                      edges {
-                        node {
-                          Id
-                          Name {
-                            value
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-        """;
+        string query = await File.ReadAllTextAsync(
+            Path.Combine(GraphBasePath, "getAccountsByIDs.graphql")
+        );
 
         var gqlRequest = new GraphQLRequest
         {
             Query = query,
-            Variables = { }
+            Variables = new {
+                ids = new string[]
+                {
+                    "0018b00002bOgwYAAS",
+                    "0018b00002bOgwZAAS"
+                }
+            }
         };
 
         var graphQLResponse = await client.SendQueryAsync<SalesforceGQLRootQuery>(gqlRequest);
