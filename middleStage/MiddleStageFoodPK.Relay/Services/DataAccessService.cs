@@ -2,6 +2,7 @@
 using GraphQL.Client.Http;
 using GraphQL.Types.Relay.DataObjects;
 using Microsoft.Extensions.Logging;
+using MiddleStageFoodPK.Model.Upstream;
 using MiddleStageFoodPK.Relay.Context;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,8 @@ using System.Linq;
 using System.Reflection.Metadata;
 using System.Security.Principal;
 using System.Text;
+using System.Text.Json;
+using System.Text.Json.Nodes;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
@@ -65,7 +68,7 @@ public class DataAccessService : IDataAccessService
             Variables = { }
         };
 
-        var graphQLResponse = await client.SendQueryAsync<dynamic>(gqlRequest);
+        var graphQLResponse = await client.SendQueryAsync<SalesforceGQLRootQuery>(gqlRequest);
 
         await Console.Out.WriteLineAsync("yes");
 

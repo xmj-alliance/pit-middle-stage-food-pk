@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiddleStageFoodPK.Test", "M
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiddleStageFoodPK.Relay", "MiddleStageFoodPK.Relay\MiddleStageFoodPK.Relay.csproj", "{70F821CC-37FD-4CBC-BAB6-F68220A4C302}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiddleStageFoodPK.Model", "MiddleStageFoodPK.Model\MiddleStageFoodPK.Model.csproj", "{59C1F8BF-8B69-4FCA-B7BC-B4E74F2C606C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{70F821CC-37FD-4CBC-BAB6-F68220A4C302}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70F821CC-37FD-4CBC-BAB6-F68220A4C302}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70F821CC-37FD-4CBC-BAB6-F68220A4C302}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59C1F8BF-8B69-4FCA-B7BC-B4E74F2C606C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59C1F8BF-8B69-4FCA-B7BC-B4E74F2C606C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59C1F8BF-8B69-4FCA-B7BC-B4E74F2C606C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59C1F8BF-8B69-4FCA-B7BC-B4E74F2C606C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
