@@ -6,23 +6,16 @@ using MiddleStageFoodPK.Relay.Context;
 
 namespace MiddleStageFoodPK.Relay.Services;
 
-public class DataAccessService : IDataAccessService
+public class DataAccessService(
+    ILogger<DataAccessService> logger,
+    IGraphQLClientContext clientContext
+    ) : IDataAccessService
 {
-    private readonly GraphQLHttpClient client;
-    private readonly ILogger<DataAccessService> logger;
+    private readonly GraphQLHttpClient client = clientContext.Client;
+    private readonly ILogger<DataAccessService> logger = logger;
 
     public string GraphBasePath { get; init; } =
       Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "Graphs", "Upstream"));
-
-    public DataAccessService(
-        ILogger<DataAccessService> logger,
-        IGraphQLClientContext clientContext
-    )
-    {
-        this.logger = logger;
-        client = clientContext.Client;
-
-    }
 
     public async Task TestGetAccounts()
     {

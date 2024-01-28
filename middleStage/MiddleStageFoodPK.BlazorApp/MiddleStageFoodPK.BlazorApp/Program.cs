@@ -39,7 +39,7 @@ builder.Services.AddRazorComponents()
 builder.Services.AddDistributedMemoryCache();
 
 // Configuring services
-builder.Services.AddSingleton<IDataAccessService, DataAccessService>();
+builder.Services.AddSingleton<IAccountService, AccountService>();
 builder.Services.AddSingleton<IGraphQLClientContext, GraphQLClientContext>();
 
 var app = builder.Build();

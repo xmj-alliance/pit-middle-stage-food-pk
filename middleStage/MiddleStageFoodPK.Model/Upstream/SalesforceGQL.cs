@@ -15,12 +15,18 @@ public record SalesforceGQLAccount(
 
 public record SalesforceGQLContact(
     string Id,
-    SalesforceGQLValue<string> Name
+    SalesforceGQLValue<string> Name,
+    SalesforceGQLValue<string> Description
 );
 
 public record SalesforceGQLRating__c(
     string Id,
-    SalesforceGQLValue<string> Name
+    SalesforceGQLValue<string> Name,
+    SalesforceGQLValue<string> Account__c,
+    SalesforceGQLValue<string> Contact__c,
+    SalesforceGQLValue<string> Title__c,
+    SalesforceGQLValue<string> Description__c,
+    SalesforceGQLValue<double> Stars__c
 );
 
 #endregion gqlModels

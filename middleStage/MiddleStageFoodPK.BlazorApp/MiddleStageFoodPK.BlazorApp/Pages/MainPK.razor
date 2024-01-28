@@ -1,6 +1,6 @@
 ﻿@page "/pks/main"
 @rendermode InteractiveServer
-@inject IDataAccessService dataAccessService
+@inject IAccountService accountService
 
 <PageTitle>MainPK</PageTitle>
 
@@ -9,24 +9,36 @@
 This is the content of that PK
 
 <div>
-    <button class="btn btn-primary" @onclick="OnGetListViewButtonClick">GetListViewTest</button>
+    <code>@tmpOutput</code>
+</div>
+
+<div>
+    <button class="btn btn-primary" @onclick="OnGetAccountsButtonClick">Test Get Accounts</button>
     <button class="btn btn-primary" @onclick="OnCreateAccountButtonClick">Test Add Account</button>
 </div>
 
 
 @code {
+    private string tmpOutput = "";
+
     private void Hello()
     {
         Console.WriteLine("hello");
     }
 
-    private async Task OnGetListViewButtonClick()
+    private async Task OnGetAccountsButtonClick()
     {
-        await dataAccessService.TestGetAccounts();
+        List<string> ids = new()
+        {
+            "0018b00002bOgwYAAS",
+            "0018b00002bOgwZAAS",
+        };
+        List<Account> accounts = await accountService.GetAccountsByIDs(ids);
+        tmpOutput = JsonSerializer.Serialize(accounts);
     }
 
     private async Task OnCreateAccountButtonClick()
     {
-        await dataAccessService.TestAddAccount();
+        // await dataAccessService.TestAddAccount();
     }
 }
