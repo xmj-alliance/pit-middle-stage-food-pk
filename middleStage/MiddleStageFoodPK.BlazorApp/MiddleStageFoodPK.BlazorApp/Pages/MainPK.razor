@@ -10,6 +10,7 @@ This is the content of that PK
 
 <div>
     <button class="btn btn-primary" @onclick="OnGetListViewButtonClick">GetListViewTest</button>
+    <button class="btn btn-primary" @onclick="OnCreateAccountButtonClick">Test Add Account</button>
 </div>
 
 
@@ -22,5 +23,10 @@ This is the content of that PK
     private async Task OnGetListViewButtonClick()
     {
         await dataAccessService.TestGetAccounts();
+    }
+
+    private async Task OnCreateAccountButtonClick()
+    {
+        await dataAccessService.TestAddAccount();
     }
 }

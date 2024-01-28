@@ -1,0 +1,15 @@
+mutation addAccount($newItem: AccountCreateInput!, $option: UIAPIMutationsInput!) {
+  uiapi(input: $option) {
+    AccountCreate(input: $newItem) {
+			Record {
+				Id
+				Name {
+					value
+				}
+				Description {
+					value
+				}
+			}
+		}
+  } 
+}
