@@ -3,6 +3,12 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+                <componentName>view_foodPKHome</componentName>
+                <identifier>c_view_foodPKHome</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
                 <componentInstanceProperties>
                     <name>enableInlineEdit</name>
                     <value>true</value>
